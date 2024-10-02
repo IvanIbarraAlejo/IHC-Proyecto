@@ -1,0 +1,10 @@
+#card-L_S{
+    width: 100%; 
+    max-width: 400px; 
+    border-radius: 15px;
+}
+
+#button{
+    background-color: rgb(0, 153, 153); color: white;
+    border-color: rgb(0, 153, 153);
+}
