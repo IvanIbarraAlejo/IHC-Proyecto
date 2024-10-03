@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyLoan - Sign up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
+    <link href="../CSS/logsign.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card shadow-lg p-4" id="card-L_S">
+            <h2 class="text-center mt-1 mb-4">Iniciar Sesión</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="number_cel" class="form-label">Correo Electrónico</label>
+                    <input type="number_cel" class="form-control" id="number_cel" placeholder="nombre@ejemplo.com">
+                  </div>
+                  <div class="mb-3">
+                      <label for="" class="form-label">Teléfono</label>
+                      <input type="email" class="form-control" id="email" placeholder="XX-XXXX-XXXX">
+                    </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100" id="button">Entrar</button>
+                  <p class="pt-2 w-100 text-center">¿Tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
