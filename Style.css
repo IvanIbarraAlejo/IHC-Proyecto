@@ -29,12 +29,13 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 a.btn {
     background-color: rgb(34, 139, 34);
     color: rgb(245, 245, 245);
+    border-color: rgb(34, 139, 34);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,79 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+#navbar {
+    background-color: rgb(34, 54, 87);
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    z-index: 99999;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #0056b3;
+}
+.navbar-brand {
+    font-weight: 700;
+}
+.nav-link {
+    font-weight: 400;
+}
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-primary:hover {
+    background-color: #003d82;
+    border-color: #003d82;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    padding: 2rem;
+}
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+.form-control, .form-select {
+    border-radius: 8px;
+}
+.input-group-text {
+    background-color: #e9ecef;
+    border-radius: 8px 0 0 8px;
+}
+#startTutorial {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+#startTutorial:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0056b3;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
