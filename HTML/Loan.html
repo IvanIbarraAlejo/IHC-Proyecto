@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js@5.1.0/minified/introjs.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Loan.css">
+    <link rel="stylesheet" href="../CSS/calendar.css">
     <style>
     </style>
 </head>
@@ -39,7 +40,32 @@
 
     <section class="py-5">
         <div class="container">
-            <h1 class="text-center section-title">Calculadora de Préstamo</h1>
+            <h1 class="text-center d-flex justify-content-center section-title">Simulación de pago</h1>
+            <div>
+                <div class="container">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-nav" id="prevMonth">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h4 class="mb-0" id="monthYear"></h4>
+                                <button class="btn btn-nav" id="nextMonth">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="d-flex flex-wrap p-3" id="calendar"></div>
+                            <div class="current-date text-center" id="currentDate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            
+            <h1 class="text-center d-flex justify-content-center section-title">Calculadora de Préstamo</h1>
             <div class="text-center mb-4">
                 <button id="startTutorial" class="btn btn-success btn-lg">
                     <i class="bi bi-info-circle me-2"></i>Iniciar Tutorial
@@ -49,55 +75,57 @@
                 <div class="card-body">
                     <form id="loanForm">
                         <div class="row g-4">
-                            <div class="col-md-6" data-step="1" data-intro="Ingrese el monto total del préstamo que desea solicitar.">
+                            <div class="col-md-6" data-step="1" data-intro="Aquí ingresa el monto total del préstamo que desea solicitar.">
                                 <label for="loanAmount" class="form-label">Monto del préstamo</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control" id="loanAmount" name="loanAmount" step="5" value="1000" required>
+                                    <input type="number" class="form-control" id="loanAmount" name="loanAmount" step="5" value="2500" required>
                                 </div>
                             </div>
                             <div class="col-md-6" data-step="2" data-intro="Este es el porcentaje de interés aplicable a su préstamo.">
                                 <label for="interestRate" class="form-label">Tasa de interés (%)</label>
-                                <input type="number" class="form-control" id="interestRate" name="interestRate" step="5" value="15" readonly required>
+                                <input type="number" class="form-control" id="interestRate" name="interestRate" value="15" readonly required>
                             </div>
-                            <div class="col-md-6" data-step="3" data-intro="Seleccione el tipo de plazo para su préstamo.">
+                            <div class="col-md-6" data-step="3" data-intro="Seleccione el tipo de plazo de los pagos (semanal, quincenal o mensual).">
                                 <label for="frequency" class="form-label">Tipo de plazo</label>
-                                <select id="frequency" name="frequency" class="form-select">
+                                <select id="frequency" name="frequency" class="form-select" required>
                                     <option value="monthly">Plazo mensual</option>
-                                    <option value="weekly">Plazo semanal</option>
                                     <option value="fortnightly">Plazo quincenal</option>
+                                    <option value="weekly">Plazo semanal</option>
                                 </select>
                             </div>
-                            <div class="col-md-6" data-step="4" data-intro="Ingrese la duración del préstamo en semanas, quincenas o meses.">
+                            <div class="col-md-6" data-step="4" data-intro="Ingrese la duración del préstamo según su elección anterior">
                                 <label for="loanTerm" class="form-label">Plazo</label>
-                                <input type="number" class="form-control" id="loanTerm" name="loanTerm" step="5" value="3" required>
+                                <input type="number" class="form-control" id="loanTerm" name="loanTerm" value="3" required>
                             </div>
-                            <div class="col-md-6" data-step="5" data-intro="Aquí se mostrará su pago mensual calculado.">
+                            <div class="col-md-6" data-step="5" data-intro="Aquí se mostrará el pago por cada período según su selección.">
                                 <label for="termAmount" class="form-label">Pago por plazo</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control" id="termAmount" name="termAmount" step="5" required>
+                                    <input type="number" class="form-control" id="termAmount" name="termAmount" readonly required>
                                 </div>
                             </div>
-                            <div class="col-md-6" data-step="6" data-intro="Este campo muestra el pago por cada período según su selección.">
+                            <div class="col-md-6" data-step="6" data-intro="Aquí se mostrará el pago total dependiendo de los plazos y el monto inicial.">
                                 <label for="totalPayment" class="form-label">Pago total</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control" id="totalPayment" name="totalPayment" step="5" readonly required>
+                                    <input type="number" class="form-control" id="totalPayment" name="totalPayment" readonly required>
                                 </div>
                             </div>
                             <div class="col-12 text-center mt-4" data-step="7" data-intro="Haga clic aquí para calcular su préstamo basado en la información proporcionada.">
-                                <button type="submit" class="btn btn-primary btn-lg px-5">Calcular</button>
+                                <button id="calculateBtn" type="submit" class="btn btn-primary btn-lg px-5">Calcular</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/intro.js@5.1.0/minified/intro.min.js"></script>
     <script src="../JS/Loan.js"></script>
+    <script src="../JS/calendar.js"></script>
 </body>
 </html>
