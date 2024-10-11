@@ -1,0 +1,55 @@
+body {
+    background-color: #f0f8ff;
+    font-size: 18px;
+}
+#navbar {
+    background-color: rgb(34, 54, 87);
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    z-index: 99999;
+}
+.card {
+    border-color: #0056b3;
+}
+.card-header {
+    background-color: #0056b3;
+    color: white;
+}
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-primary:hover {
+    background-color: #003d82;
+    border-color: #003d82;
+}
+.payment-row:hover {
+    background-color: #e6f2ff;
+}
+.explanation {
+    background-color: #e6f2ff;
+    border-left: 5px solid #0056b3;
+    padding: 15px;
+    margin-top: 20px;
+}
+.bigger-font{
+    font-size: 1.4rem;
+}
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0056b3;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
