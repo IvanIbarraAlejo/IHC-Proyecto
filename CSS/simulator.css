@@ -1,40 +1,36 @@
-body {
-    background-color: #f0f8ff;
+:root {
+    --bs-primary: rgb(34, 54, 87);
+    --bs-primary-rgb: 44, 62, 80;
+}
+body{
+    padding: 0;
+    margin: 0;
     font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-#navbar {
-    background-color: rgb(34, 54, 87);
-    position: fixed;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    z-index: 99999;
+.navbar-brand {
+    font-weight: 700;
 }
-.card {
-    border-color: #0056b3;
+.nav-link {
+    font-weight: 400;
 }
-.card-header {
-    background-color: #0056b3;
-    color: white;
+.bg-primary {
+    background-color: var(--bs-primary) !important;
 }
 .btn-primary {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: rgb(24, 73, 150);
+    border-color: var(--bs-primary);
 }
 .btn-primary:hover {
-    background-color: #003d82;
-    border-color: #003d82;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
 }
-.payment-row:hover {
-    background-color: #e6f2ff;
-}
-.explanation {
-    background-color: #e6f2ff;
-    border-left: 5px solid #0056b3;
-    padding: 15px;
-    margin-top: 20px;
-}
-.bigger-font{
-    font-size: 1.4rem;
+.btn-primary:active {
+    background-color: rgb(34, 60, 87); /* Verde aún más oscuro */
+  }
+.border-primary {
+    border-color: #2C3E50 !important;
 }
 .section-title {
     position: relative;

@@ -6,43 +6,38 @@
     <title>Simulador de Préstamos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/simulator.css">
 </head>
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#"><i class="bi bi-currency-exchange me-2"></i>EasyLoan</a>
+            <a class="navbar-brand" href="../Index.html"><i class="bi bi-currency-exchange me-2"></i>EasyLoan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Blog</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="Loan.html">Préstamos</a>
+                        <a class="nav-link" href="Loan.html">Préstamos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="signup.html">Sign up</a>
+                        <a class="nav-link text-white" href="#">Perfil</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
 
-    <h1 class="text-center d-flex justify-content-center section-title">Simulación de pago</h1>
-    <div class="container">
+    <div class="container mt-5 pt-5">
+        <h1 class="d-flex text-center justify-content-center section-title mb-4">Simulación de pago</h1>
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header">
+            <div class="col-md-5 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
                         <h5 class="card-title mb-0">Detalles del Préstamo</h5>
                     </div>
                     <div class="card-body">
@@ -72,21 +67,21 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex col-md-8 mb-4">
-                <div class="bigger-font card flex-fill">
-                    <div class="card-header">
+            <div class="col-md-7 mb-4">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-primary text-white">
                         <h5 class="card-title mb-0">Resumen del Préstamo</h5>
                     </div>
                     <div class="card-body">
-                        <div id="loanSummary"></div>
+                        <div id="loanSummary" class="fs-5"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
                         <h5 class="card-title mb-0">Plan de Pagos</h5>
                     </div>
                     <div class="card-body">
@@ -111,19 +106,20 @@
         </div>
         <div class="row mt-4">
             <div class="col-12">
-                <div class="explanation">
-                    <h4>Explicación del Plan de Pagos</h4>
-                    <p><strong>Cálculo del Plan de Pagos:</strong> El cálculo que determina la cantidad del pago de cada plazo se obtiene mediante una fórmula estandar para la mayoría de organizaciones. Para simplificar: cada mes, pagas intereses sobre el capital restante y una parte del capital. Pagas la misma cantidad cada mes, pero al principio, una mayor parte de tu pago va a los intereses. Con el tiempo, más de tu pago va al capital.</p>
-                    <p><strong>Columna Principal:</strong> Esta columna muestra la cantidad de dinero que se aplica directamente a la reducción del saldo del préstamo en cada pago. Al principio del préstamo, esta cantidad es menor porque una mayor parte del pago se destina a los intereses. A medida que avanza el tiempo, la porción del pago que se aplica al principal aumenta.</p>
-                    <p><strong>Columna Interés:</strong> Esta columna indica la cantidad de dinero que se paga en concepto de intereses en cada cuota. El interés se calcula sobre el saldo pendiente del préstamo. Por lo tanto, al principio del préstamo, cuando el saldo es mayor, se paga más en intereses. A medida que el saldo disminuye, la cantidad de interés también disminuye.</p>
-                    <p><strong>Columna Balance:</strong> Esta columna muestra el saldo pendiente del préstamo después de cada pago. Comienza con el monto total del préstamo y disminuye con cada pago realizado. La reducción del balance en cada pago es igual a la cantidad aplicada al principal en ese pago.</p>
+                <div class="card shadow border-start border-primary border-5">
+                    <div class="card-body">
+                        <h4>Explicación del Plan de Pagos</h4>
+                        <p><strong>Cálculo del Plan de Pagos:</strong> El cálculo que determina la cantidad del pago de cada plazo se obtiene mediante una fórmula estandar para la mayoría de organizaciones. Para simplificar: cada mes, pagas intereses sobre el capital restante y una parte del capital. Pagas la misma cantidad cada mes, pero al principio, una mayor parte de tu pago va a los intereses. Con el tiempo, más de tu pago va al capital.</p>
+                        <p><strong>Columna Principal:</strong> Esta columna muestra la cantidad de dinero que se aplica directamente a la reducción del saldo del préstamo en cada pago. Al principio del préstamo, esta cantidad es menor porque una mayor parte del pago se destina a los intereses. A medida que avanza el tiempo, la porción del pago que se aplica al principal aumenta.</p>
+                        <p><strong>Columna Interés:</strong> Esta columna indica la cantidad de dinero que se paga en concepto de intereses en cada cuota. El interés se calcula sobre el saldo pendiente del préstamo. Por lo tanto, al principio del préstamo, cuando el saldo es mayor, se paga más en intereses. A medida que el saldo disminuye, la cantidad de interés también disminuye.</p>
+                        <p><strong>Columna Balance:</strong> Esta columna muestra el saldo pendiente del préstamo después de cada pago. Comienza con el monto total del préstamo y disminuye con cada pago realizado. La reducción del balance en cada pago es igual a la cantidad aplicada al principal en ese pago.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
     </div>
-
+    <br>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../JS/simulator.js"></script>
 </body>

@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyLoan - Online Loan Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js@5.1.0/minified/introjs.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Loan.css">
-    <link rel="stylesheet" href="../CSS/calendar.css">
     <style>
     </style>
 </head>
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#"><i class="bi bi-currency-exchange me-2"></i>EasyLoan</a>
+            <a class="navbar-brand" href="../Index.html"><i class="bi bi-currency-exchange me-2"></i>EasyLoan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Blog</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="simulator.html">Simulador</a>
+                        <a class="nav-link" href="simulator.html">Simulador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="signup.html">Sign up</a>
+                        <a class="nav-link text-white" href="#">Perfil</a>
                     </li>
                 </ul>
             </div>
@@ -43,11 +40,6 @@
     <section class="py-5">
         <div class="container">
             <h1 class="text-center d-flex justify-content-center section-title">Calculadora de Préstamo</h1>
-            <div class="text-center mb-4">
-                <button id="startTutorial" class="btn btn-success btn-lg">
-                    <i class="bi bi-info-circle me-2"></i>Iniciar Tutorial
-                </button>
-            </div>
             <div class="card shadow">
                 <div class="card-body">
                     <form id="loanForm">
@@ -89,8 +81,15 @@
                                     <input type="number" class="form-control" id="totalPayment" name="totalPayment" readonly required>
                                 </div>
                             </div>
-                            <div class="col-12 text-center mt-4" data-step="7" data-intro="Haga clic aquí para calcular su préstamo basado en la información proporcionada.">
-                                <button id="calculateBtn" type="submit" class="btn btn-primary btn-lg px-5">Calcular</button>
+                            <div class="row text-center mt-4">
+                                <div class="col-6">
+                                    <button id="startTutorial" class="btn btn-success btn-lg">
+                                        <i class="bi bi-info-circle"></i> Iniciar Tutorial
+                                    </button>
+                                </div>
+                                <div class="text-center col-6" data-step="7" data-intro="Haga clic aquí para calcular su préstamo basado en la información proporcionada.">
+                                    <button type="submit" class="btn btn-primary btn-lg">Calcular</button>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -103,6 +102,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/intro.js@5.1.0/minified/intro.min.js"></script>
     <script src="../JS/Loan.js"></script>
-    <script src="../JS/calendar.js"></script>
 </body>
 </html>
